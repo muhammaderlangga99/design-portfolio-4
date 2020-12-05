@@ -1,0 +1,812 @@
+* {
+	user-select: none;
+}
+
+body {
+	overflow-x: hidden;
+	font-family: 'Montserrat';
+}
+
+nav {
+	display: flex;
+	justify-content: space-around;
+	padding: 13px;
+}
+
+nav h3 a {
+	font-family: 'Abril Fatface', cursive;
+	color: #333;
+	text-decoration: none;
+}
+
+nav h3 a span {
+	color: rgb(254, 120, 21);
+}
+
+.feather.logo {
+	width: 20px;
+	height: 20px;
+	margin-left: 3px;
+	position: absolute;
+	stroke: currentColor;
+	color: #333;
+	stroke-width: 2;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+	fill: none;
+}
+
+ul.nav {
+	display: flex;
+	width: 43%;
+	justify-content: space-between;
+}
+
+ul.nav li a {
+	color: #333;
+	text-decoration: none;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: bold;
+	font-size: 0.8em;
+	letter-spacing: 1px;
+	position: relative;
+}
+
+
+ul.nav li a:hover {
+	color: rgb(254, 120, 21);
+	transition: .4s;
+}
+
+/* todo button */
+ul.nav button {
+	border: none;
+	padding: none;
+	background: none;
+	color: rgb(17, 17, 53);
+	font-family: 'Montserrat', sans-serif;
+	cursor: pointer;
+	outline: none;
+	position: relative;
+}
+
+/*ul.nav button:active {
+	color: rgb(255, 0, 0);
+}*/
+
+.feather.dark {
+	width: 16px;
+	position: absolute;
+	margin-left: -18px;
+	margin-top: -3px;
+}
+
+.light {
+	display: none;
+	color: rgb(18, 28, 40);
+}
+
+ul.media-sosial {
+	height: 400px;
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	margin: 0 12%;
+}
+
+.feather.medsos {
+	width: 20px;
+	height: 20px;
+	margin-left: 3px;
+	position: absolute;
+	stroke: currentColor;
+	color: #333;
+	stroke-width: 2;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+	fill: none;
+}
+
+/* *** */
+ul.media-sosial li a {
+	color: #333;
+	text-decoration: none;
+}
+
+ul.media-sosial li a span {
+	color: rgb(254, 120, 21);
+	margin-left: 25px;
+	display: none;
+}
+
+.feather.medsos:hover {
+	color: rgb(254, 120, 21);
+	transition: .4s;
+}
+
+
+
+/* todo for javaScript */
+.darkBody {
+	transition: 0.5s;
+	background-color: rgb(18, 28, 40);
+}
+
+.ligthText {
+	color: #fff;
+}
+
+.muncul {
+	display: inline;
+}
+
+.hilang {
+	display: none;
+}
+
+span.light.darkText {
+	color: rgb(254, 120, 21);
+}
+
+.jumbotron h2 span.by.ligthText {
+	color: #fff;
+}
+
+ul.media-sosial li a span.oke {
+	display: inline;
+}
+
+ul.media-sosial li a i {
+	display: flex;
+}
+
+/* todo animation hamburger*/
+.menu-toggler {
+	display: none;
+	flex-direction: column;
+	height: 20px;
+	justify-content: space-between;
+	position: relative;
+}
+
+.menu-toggler input {
+	position: absolute;
+	width: 29px;
+	height: 29px;
+	top: -7.5px;
+	margin-left: -1px;
+	opacity: 0;
+	z-index: 3;
+	cursor: pointer;
+}
+
+.menu-toggler span:nth-child(2) {
+	transform-origin: 0 0;
+}
+
+.menu-toggler span:nth-child(4) {
+	transform-origin: 0 100%;
+}
+
+.menu-toggler input:checked~span:nth-child(2) {
+	transform: rotate(45deg) translate(-1px, -0px);
+	margin-left: 0.5px;
+}
+
+.menu-toggler input:checked~span:nth-child(4) {
+	transform: rotate(-45deg) translate(-1px);
+}
+
+.menu-toggler input:checked~span:nth-child(3) {
+	transform: scale(0);
+}
+
+.menu-toggler input:checked~span {
+	background: rgb(254, 120, 21);
+}
+
+.menu-toggler span {
+	display: block;
+	width: 28px;
+	height: 3px;
+	background: #333;
+	transition: .6s;
+}
+
+.jumbotron {
+	position: relative;
+	display: flex;
+}
+
+.jumbotron img {
+	width: 500px;
+	right: 10%;
+	top: 50px;
+	position: absolute;
+	user-select: none;
+}
+
+.jumbotron h2 {
+	margin: 230px auto;
+	font-size: 3em;
+	font-family: 'Abril Fatface', cursive;
+	z-index: 2;
+	text-shadow: 0px 5px 3px rgba(0, 0, 0, .10);
+	user-select: none;
+}
+
+.jumbotron h2 span {
+	color: rgb(254, 120, 21);
+}
+
+.jumbotron h2 span.by {
+	font-size: 0.2em;
+	text-shadow: none;
+	font-family: arial;
+	color: #333;
+	margin-top: -100px;
+	position: absolute;
+	top: 77%;
+	letter-spacing: 1.4px;
+}
+
+
+
+/* todo welcome */
+.welcome {
+	max-width: 90%;
+	margin: auto;
+}
+
+.welcome h3 {
+	font-family: 'Philosopher',
+		sans-serif;
+	text-align: center;
+	font-size: 3em;
+}
+
+.welcome .myself {
+	display: flex;
+	justify-content: space-evenly;
+	margin: 50px auto;
+	font-family: 'Montserrat', sans-serif;
+	line-height: 1.5em;
+	font-size: 1.2em;
+}
+
+.welcome .myself img {
+	width: 400px;
+	border-radius: 30px;
+}
+
+.welcome .myself p {
+	width: 400px;
+	margin: 50px 0;
+}
+
+span.bio {
+	font-size: 14px;
+	margin-top: 20px;
+}
+
+.welcome .myself a {
+	font-size: 14px;
+	color: rgb(114, 69, 37);
+	text-decoration: none;
+	transition: .2s;
+}
+
+.welcome .myself a:hover {
+	color: rgb(254, 120, 21);
+}
+
+.welcome .myself a span.muncul {
+	display: inline;
+}
+
+.welcome .myself a span {
+	display: none;
+	font-weight: bold;
+}
+
+/* gallery */
+.gallery {
+	max-width: 80%;
+	display: flex;
+	flex-direction: column;
+	margin: auto;
+	margin-top: 150px;
+}
+
+.gallery h3 {
+	max-width: 100px;
+	text-align: left;
+	font-family: 'Philosopher',
+		sans-serif;
+	font-size: 3em;
+	border-bottom: 2px solid rgb(254, 120, 21);
+	padding: 15px;
+	box-sizing: border-box;
+}
+
+.gallery p {
+	max-width: 70%;
+	margin-top: 20px;
+	line-height: 1.5em;
+}
+
+.pictures {
+	max-width: 90%;
+	margin: 50px auto;
+	overflow: hidden;
+}
+
+.pictures header {
+	max-width: 792px;
+	overflow: hidden;
+	height: 200px;
+	position: relative;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+}
+
+.pictures header img {
+	margin-top: -700px;
+}
+
+
+.pictures .foto {
+	display: flex;
+}
+
+.pictures .foto .pict nav {
+	max-width: 300px;
+	height: 195px;
+	overflow: hidden;
+	margin-top: 4px;
+	position: relative;
+	margin-bottom: 4px;
+}
+
+.pictures .foto .pict nav img {
+	margin-top: -15px;
+}
+
+.pictures .foto .pict main {
+	max-width: 326px;
+	height: 200px;
+	overflow: hidden;
+	border-bottom-left-radius: 20px;
+	position: relative;
+}
+
+.pictures .foto aside {
+	right: 0;
+	height: 425.1px;
+	margin-top: 4px;
+	margin-left: 4px;
+	overflow: hidden;
+	border-bottom-right-radius: 20px;
+	position: relative;
+}
+
+.pictures a span {
+	position: absolute;
+}
+
+header a span {
+	display: flex;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0, 0, 0, .75);
+	justify-content: center;
+	align-items: center;
+	top: 0;
+	opacity: 0;
+	transition: .3s;
+	transition: rotate(360deg);
+	color: #eaeaea;
+}
+
+header a span:hover {
+	opacity: 1;
+}
+
+.foto .pict nav a span {
+	display: flex;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0, 0, 0, .75);
+	justify-content: center;
+	align-items: center;
+	opacity: 0;
+	transition: .3s;
+	transition: rotate(360deg);
+	color: #eaeaea;
+}
+
+.foto .pict nav a span:hover {
+	opacity: 1;
+}
+
+main a span {
+	display: flex;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0, 0, 0, .75);
+	justify-content: center;
+	align-items: center;
+	opacity: 0;
+	transition: .3s;
+	transition: rotate(360deg);
+	color: #eaeaea;
+}
+
+main a span:hover {
+	opacity: 1;
+}
+
+aside a span {
+	display: flex;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0, 0, 0, .75);
+	justify-content: center;
+	align-items: center;
+	opacity: 0;
+	transition: .3s;
+	transition: rotate(360deg);
+	color: #eaeaea;
+}
+
+aside a span:hover {
+	opacity: 1;
+}
+
+a.btn {
+	color: #eaeaea;
+	width: 5em;
+	padding: 10px;
+	text-decoration: none;
+	background-color: rgb(254, 120, 21);
+	border-radius: 10px;
+	margin: auto;
+}
+
+a.btn:hover {
+	background: #CC7436;
+}
+
+.lightbox {
+	left: 0;
+	top: 0;
+	position: absolute;
+	background: rgba(0, 0, 0, .75);
+	position: fixed;
+	z-index: 999;
+	width: 0;
+	height: 0;
+	overflow: hidden;
+	text-align: center;
+}
+
+.lightbox:target {
+	width: auto;
+	height: auto;
+	bottom: 0;
+	right: 0;
+	transition: 0.8s;
+	padding: 10%;
+}
+
+.lightbox img {
+	width: 70%;
+	max-height: 100%;
+}
+
+.lightbox a {
+	display: block;
+	color: #fff;
+	text-decoration: none;
+	position: absolute;
+	border: 1px solid white;
+	border-radius: 10px;
+	padding: 3px;
+	top: 50px;
+	right: 20%;
+}
+
+/* todo my Skills */
+.myskills {
+	width: 80%;
+	margin: 100px auto;
+}
+
+.myskills h3 {
+	font-family: 'philosopher', sans-serif;
+	font-size: 3em;
+	border-bottom: 1px dotted rgb(254, 120, 21);
+	width: 200px;
+}
+
+.expertise {
+	display: flex;
+	margin-top: 50px;
+	justify-content: space-around;
+}
+
+.expertise img {
+	width: 400px;
+}
+
+.skill {
+	height: 370px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.skill .out {
+	width: 400px;
+	height: 10px;
+	overflow: hidden;
+	border-radius: 3px;
+	border: 1px solid #CC7436;
+	box-sizing: border-box;
+}
+
+.skill .out:nth-child(1) .in {
+	/*html*/
+	width: 90%;
+	height: 10px;
+	text-align: center;
+	background: rgb(254, 120, 21);
+	padding: 3px;
+	box-sizing: border-box;
+	color: #fff;
+}
+
+.skill .out:nth-child(4) .in {
+	/*css*/
+	width: 88%;
+	height: 10px;
+	text-align: center;
+	background: rgb(254, 120, 21);
+	padding: 3px;
+	box-sizing: border-box;
+	color: #fff;
+}
+
+.skill .out:nth-child(7) .in {
+	/*js*/
+	width: 70%;
+	height: 10px;
+	text-align: center;
+	background: rgb(254, 120, 21);
+	padding: 3px;
+	box-sizing: border-box;
+	color: #fff;
+}
+
+.skill .out:nth-child(10) .in {
+	/*framework*/
+	width: 78%;
+	height: 10px;
+	text-align: center;
+	background: rgb(254, 120, 21);
+	padding: 3px;
+	box-sizing: border-box;
+	color: #fff;
+}
+
+.skill p {
+	margin-top: -30px;
+}
+
+/* todo attent */
+.attention {
+	width: 100%;
+	background: red;
+	display: flex;
+	color: #fff;
+	position: relative;
+	text-align: center;
+	font-size: 15px;
+}
+
+.attention div:first-child {
+	max-width: 80%;
+	margin: auto;
+	padding: 10px;
+	box-sizing: border-box;
+	line-height: 20px;
+}
+
+div span.x {
+	position: absolute;
+	right: 0;
+	top: 0;
+	padding: 3px;
+	box-sizing: border-box;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+/* todo footer */
+footer {
+	/* box-shadow: -5px -5px rgb(0, 0, 0.10); */
+
+}
+
+footer div {
+	max-width: 100%;
+	height: 200px;
+	background: rgb(39, 48, 54);
+	margin-top: -30px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	color: #111;
+}
+
+footer ul {
+	display: flex;
+	justify-content: space-around;
+	margin: 10px 0;
+}
+
+.feather.media {
+	color: #111;
+	width: 15px;
+}
+
+.feather.media:hover {
+	color: rgb(254, 120, 21);
+	transition: .2s;
+}
+
+footer div div {
+	margin: auto;
+	text-align: center;
+}
+
+footer div h3 {
+	font-size: 2em;
+	margin-top: -40px;
+	margin-bottom: 10px;
+}
+
+div p.copy {
+	font-size: 10px;
+	font-weight: bold;
+	color: #646262;
+}
+
+/*responsive website*/
+
+/*ipad*/
+@media screen and (max-width: 768px) {
+	ul.nav {
+		width: 50%;
+	}
+
+	.jumbotron h2 {
+		margin-top: 30%;
+		margin-left: 38%;
+	}
+
+	.welcome .myself {
+		width: 70%;
+		flex-direction: column;
+	}
+
+	.expertise {
+		flex-direction: column;
+	}
+
+	.skill {
+		margin-top: 50px;
+	}
+
+}
+
+/*mobile*/
+@media screen and (max-width: 640px) {
+	ul.nav {
+		flex-direction: column;
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 100%;
+		height: 100vh;
+		justify-content: space-evenly;
+		text-align: center;
+		background: #eaeaea;
+		transform: translateX(100%);
+		opacity: 0;
+		z-index: 1;
+	}
+
+	.menu-toggler {
+		display: flex;
+		z-index: 2;
+	}
+
+	nav ul.nav.slide {
+		transform: translateX(0);
+		transition: .6s;
+		opacity: 0.95;
+	}
+
+	.jumbotron {
+		display: flex;
+		position: static;
+	}
+
+	.jumbotron img {
+		margin: 50px auto;
+		position: static;
+	}
+
+	.jumbotron h2 {
+		position: absolute;
+		top: 17%;
+		margin-left: 20%;
+		z-index: -2;
+	}
+
+	.jumbotron h2 span.by {
+		display: none;
+	}
+
+	.jumbotron ul.media-sosial {
+		flex-direction: row;
+		width: 170px;
+		justify-content: space-between;
+		top: 400px;
+		margin-left: 31.2%;
+	}
+
+	.feather.medsos {
+		width: 17px;
+		height: 17px;
+		margin-left: 3px;
+		position: absolute;
+		stroke: currentColor;
+		color: #333;
+		stroke-width: 2;
+		stroke-linecap: round;
+		stroke-linejoin: round;
+		fill: none;
+	}
+
+	.welcome .myself {
+		margin: 50px auto;
+		width: 78%;
+	}
+
+	ul.nav button {
+		border-radius: 0;
+	}
+
+	.pictures .foto aside {
+		display: none;
+	}
+
+	.pictures header {
+		width: 326px;
+	}
+
+	.pictures main {
+		border-bottom-right-radius: 20px;
+	}
+}
